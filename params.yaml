@@ -1,0 +1,23 @@
+preprocess:
+  input: data/raw/diabetes.csv
+  output: data/processed/data.csv
+
+train:
+  data: data/processed/data.csv
+  model_path: models/model.pkl
+  random_state: 42
+  n_estimators: 100
+  max_depth: 5
+
+mlflow:
+  MLFLOW_TRACKING_URI: http://13.61.142.125:5000
+
+dagshub:
+  MLFLOW_TRACKING_URI: https://dagshub.com/21027/Projet_ml.mlflow
+  MLFLOW_TRACKING_USERNAME: 21027
+  MLFLOW_TRACKING_PASSWORD: 958f3dd96ec3d6649dfc4d941243c3bc9a7ce45f
+
+aws:
+  aws_access_key_id: AKIAVTUQT5TNN3DUZC4R
+  aws_secret_access_key: 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
+  region_name: eu-north-1
